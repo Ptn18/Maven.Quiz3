@@ -8,6 +8,7 @@ import java.util.Map;
  * @author leon on 10/12/2018.
  */
 public class Student {
+    private Lab lab;
     public Student() {
         this(null);
     }
@@ -16,7 +17,7 @@ public class Student {
     }
 
     public Lab getLab(String labName) {
-        return null;
+        return lab;
     }
 
     public void setLabStatus(String labName, LabStatus labStatus) {

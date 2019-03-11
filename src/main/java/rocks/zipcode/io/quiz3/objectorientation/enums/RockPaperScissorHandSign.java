@@ -4,13 +4,30 @@ package rocks.zipcode.io.quiz3.objectorientation.enums;
  * @author leon on 09/12/2018.
  */
 public enum RockPaperScissorHandSign {
-    ADD_ENUMERATIONS_HERE;
+    ROCK,
+    PAPER,
+    SCISSOR;
+    private RockPaperScissorHandSign sign;
+
 
     public RockPaperScissorHandSign getWinner() {
-        return null;
+        if (PAPER.equals(sign)) {
+            return SCISSOR;
+        } else if(SCISSOR.equals(sign)) {
+            return ROCK;
+        } else {
+            return PAPER;
+        }
+
     }
 
     public RockPaperScissorHandSign getLoser() {
-        return null;
+        if (PAPER.equals(sign)) {
+            return ROCK;
+        } else if(SCISSOR.equals(sign)) {
+            return PAPER;
+        } else {
+            return SCISSOR;
+        }
     }
 }
