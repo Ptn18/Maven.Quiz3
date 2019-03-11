@@ -48,8 +48,13 @@ public class TicTacToe {
     }
 
     public String getWinner() {
+        for(int i = 0; i < board.length;i++){
+            if(isRowHomogenous(i).equals("O")){
+                return "0";
+            }
+        }
 
-        return null;
+        return "X";
     }
 
     public String[][] getBoard() {
